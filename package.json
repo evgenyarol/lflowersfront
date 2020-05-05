@@ -1,5 +1,5 @@
 {
-  "name": "askbrains-frontend",
+  "name": "LFLOWERS",
   "version": "0.0.1",
   "description": "",
   "scripts": {
@@ -16,7 +16,7 @@
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,less}\""
   },
   "homepage": "/",
-  "author": "Igor Ko",
+  "author": "Victoria Miksha",
   "license": "MIT",
   "engines": {
     "npm": ">=3.10.7",
