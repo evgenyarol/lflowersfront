@@ -1,0 +1,62 @@
+.paymentCard {
+  padding: 30px 30px;
+  position: relative;
+}
+
+.iconTop {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.iconTop > i {
+  font-size: 54px;
+  color: darkgray;
+}
+
+.nameTop {
+  display: block;
+  text-align: center;
+  font-size: 21px;
+  color: black;
+  font-weight: bold;
+}
+
+.numberTop {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: #74708d;
+  margin-bottom: 20px;
+}
+
+.typeTop {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #74708d;
+}
+
+.sumTop {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  background: #1890ff;
+  color: white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 100, 0.2);
+  padding: 0 13px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footerTop {
+  text-align: center;
+  border-top: 1px solid #e4e9f0;
+  color: #74708d;
+  padding-top: 10px;
+  margin-bottom: -15px;
+  font-style: italic;
+  font-size: 13px;
+}
