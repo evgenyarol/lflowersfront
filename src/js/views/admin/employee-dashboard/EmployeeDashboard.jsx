@@ -35,6 +35,7 @@ const EmployeeDashboard = ({
   getEmployees,
   createEmployee,
   editEmployee,
+  editEmployeeTypes,
   deleteEmployee,
   history,
 }) => {
@@ -55,15 +56,13 @@ const EmployeeDashboard = ({
   };
 
   const handleOk = (e) => {
-    if (!employee.lastname || !employee.firstname) {
-      e.preventDefault();
-      message.error('Введите все поля!');
-    } else {
+
       createEmployee({
         lastname: employee.lastname,
-        firstname: employee.firstName
+        firstname: employee.firstName,
+        employeeType : employee.employeeType
       });
-    }
+    
 
     setModalIsVisible(false);
   };
@@ -97,16 +96,24 @@ const EmployeeDashboard = ({
           }
           style={{ cursor: 'pointer' }}
         >
-          {`${record.firstname} ${record.lastname}`}
+          {`${record.firstname}`}
         </span>
       ),
     },
     {
-      title: 'Тип',
+      title: 'Статус',
       dataIndex: 'employeeType',
       key: 'employeeType',
-      render: (text) => (text ? text.typeName : ''),
-    },
+      render: (text, record) => {
+        return (
+          <Select defaultValue="Свободен" style={{ width: 120 }}>
+      <Option value="Свободен">Свободен</Option>
+      <Option value="Заказ">Взял заказ</Option>
+    </Select>
+        );
+      },
+    
+  },
     {
       title: 'Создан',
       dataIndex: 'createdAt',
@@ -114,14 +121,17 @@ const EmployeeDashboard = ({
       render: (text) => (text ? formatDate(text) : text),
     },
     {
-      title: 'Статус',
+      title: 'Заказ',
       dataIndex: 'employeeStatus',
       key: 'employeeStatus',
       render: (text) => {
         return (
-          <Select defaultValue="lucy" style={{ width: 120 }}>
-      <Option value="jack">Jack</Option>
-      <Option value="lucy">Lucy</Option>
+          <Select defaultValue="Без заказа" style={{ width: 120 }}>
+      <Option value="Без заказа">Без заказа</Option>
+      <Option value="Виктория">Виктория Микша</Option>
+      <Option value="Лада">Лада Литвин</Option>
+      <Option value="Илья">Илья Линник</Option>
+      <Option value="Женя">Арол Евгений</Option>
     </Select>
         );
       },
@@ -165,27 +175,6 @@ const EmployeeDashboard = ({
           onChange={handleNameChange}
           style={{ marginBottom: 20 }}
         />
-        <span style={{ fontSize: 16 }}>Фамилия</span>
-        <Input
-          value={employee.lastName}
-          onChange={handleSurnameChange}
-          style={{ marginBottom: 20 }}
-        />
-        <span style={{ fontSize: 16 }}>Тип</span>
-        <Select
-          value={employee.employeeType}
-          onChange={(value) => {
-            handleTypeChange(value);
-          }}
-          style={{ width: '100%' }}
-        >
-
-{employeeTypes.map((item) => (
-            <Option key={item._id} value={item._id}>
-              {item.typeName}
-            </Option>
-          ))}
-        </Select>
       </Modal>
     </MainLayout>
   );

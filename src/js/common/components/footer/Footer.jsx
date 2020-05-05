@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-md">
             <div className="ftco-footer-widget mb-4">
               <h3>L'FLOWERS</h3>
-              <Link to="/admin">Войти в админку</Link>
+              <Link to="/admin">Войти</Link>
             </div>
           </div>
           <div className="col-md">

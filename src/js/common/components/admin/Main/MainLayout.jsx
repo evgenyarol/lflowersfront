@@ -17,7 +17,7 @@ const MainLayout = ({ children, match }) => {
         <Layout.Header>
           <Row>
             <Col md={24}>
-              <h1 style={{ color: '#fff' }}>BENEDICT ADMIN</h1>
+              <h1 style={{ color: '#fff' }}>L'FLOWERS ADMIN</h1>
             </Col>
           </Row>
         </Layout.Header>
@@ -29,12 +29,6 @@ const MainLayout = ({ children, match }) => {
               </Menu.Item>
               <Menu.Item key="/admin/employees">
                 <Link to="/admin/employees">Работники</Link>
-              </Menu.Item>
-              <Menu.Item key="/admin/charts">
-                <Link to="/admin/charts">Графики</Link>
-              </Menu.Item>
-              <Menu.Item key="/admin/statistics">
-                <Link to="/admin/statistics">Статистика</Link>
               </Menu.Item>
             </Menu>
           </Layout.Sider>

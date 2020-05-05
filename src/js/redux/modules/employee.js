@@ -12,6 +12,7 @@ const SET_EMPLOYEE_STATUSES = 'app/employee/SET_EMPLOYEE_STATUSES';
 const SET_EMPLOYEE_TYPES = 'app/employee/SET_EMPLOYEE_TYPES';
 const CREATE_EMPLOYEE = 'app/employee/CREATE_EMPLOYEE';
 const EDIT_EMPLOYEE = 'app/employee/EDIT_EMPLOYEE';
+const EDIT_EMPLOYEE_TYPES = 'app/employee/EDIT_EMPLOYEE_TYPES';
 const DELETE_EMPLOYEE = 'app/employee/DELETE_EMPLOYEE';
 const CLEAR_STATE = 'app/employee/CLEAR_STATE';
 
@@ -28,6 +29,7 @@ export const constants = {
   GET_EMPLOYEE_TYPES,
   CREATE_EMPLOYEE,
   EDIT_EMPLOYEE,
+  EDIT_EMPLOYEE_TYPES,
   DELETE_EMPLOYEE,
   CLEAR_STATE,
 };
@@ -57,6 +59,7 @@ export const getEmployeeStatuses = createAction(
   () => {}
 );
 export const getEmployeeTypes = createAction(GET_EMPLOYEE_TYPES, () => {});
+export const editEmployeeTypes = createAction(EDIT_EMPLOYEE_TYPES, (employee) => employee);
 export const createEmployee = createAction(
   CREATE_EMPLOYEE,
   (employee) => employee

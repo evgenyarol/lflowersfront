@@ -196,18 +196,25 @@ const MainCart = ({
                     if (order.length === 0 || !login) {
                       e.preventDefault();
                       message.error({
-                        content: 'Введите ваше имя!',
+                        content: 'Введите ваше имя',
                         key: 'order-submit',
                         duration: 1,
                       });
                     } else if (order.length === 0 || !phone) {
                       e.preventDefault();
                       message.error({
-                        content: 'Введите ваше телефон!',
+                        content: 'Введите ваше телефон',
                         key: 'order-submit',
                         duration: 1,
                       });
-                    } else {
+                    } else if (order.length === 0 || !adress) {
+                      e.preventDefault();
+                      message.error({
+                        content: 'Введите ваш адрес',
+                        key: 'order-submit',
+                        duration: 1,
+                      });
+                    }  else {
                       postOrder({
                         product: order.map((i) => i._id),
                         total: order
@@ -220,7 +227,7 @@ const MainCart = ({
                       });
                       notification.open({
                         message: 'Заказ оформлен!',
-                        description: 'Подойдите к администратору для оплаты.',
+                        description: 'Курьер свяжется с Вами в ближайшее время.',
                       });
                     }
                   }}
