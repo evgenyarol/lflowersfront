@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="row mb-5">
           <div className="col-md">
             <div className="ftco-footer-widget mb-4">
-              <h3>L'FLOWERS</h3>
+              <h3>CAKESBORISOV</h3>
               <Link to="/admin">Войти</Link>
             </div>
           </div>
@@ -20,19 +20,19 @@ const Footer = () => {
                   <li>
                     <span className="icon icon-map-marker" />
                     <span className="text">
-                      Igumentckii trakt , 26 , Minsk , Belarus
+                      Stroitelei, 45 , Borisov, Belarus
                     </span>
                   </li>
                   <li>
                     <a href="/">
                       <span className="icon icon-phone" />
-                      <span className="text">+375291935711</span>
+                      <span className="text">++375291671067</span>
                     </a>
                   </li>
                   <li>
                     <a href="/">
                       <span className="icon icon-envelope" />
-                      <span className="text">victoriamiksha@gmail.com</span>
+                      <span className="text">linnikil200095@gmail.com</span>
                     </a>
                   </li>
                 </ul>

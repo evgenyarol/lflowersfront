@@ -17,7 +17,7 @@ const NavBar = ({ total }) => {
       <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
-          L'FLOWERS
+          CAKESBORISOV
           </Link>
           <button className="navbar-toggler" type="button">
             <span className="oi oi-menu" /> Menu

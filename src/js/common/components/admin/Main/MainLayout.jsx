@@ -17,7 +17,7 @@ const MainLayout = ({ children, match }) => {
         <Layout.Header>
           <Row>
             <Col md={24}>
-              <h1 style={{ color: '#fff' }}>L'FLOWERS ADMIN</h1>
+              <h1 style={{ color: '#fff' }}>CAKESBORISOV ADMIN</h1>
             </Col>
           </Row>
         </Layout.Header>

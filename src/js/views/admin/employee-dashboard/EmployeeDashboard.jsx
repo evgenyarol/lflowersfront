@@ -126,11 +126,11 @@ const EmployeeDashboard = ({
       key: 'employeeStatus',
       render: (text) => {
         return (
-          <Select defaultValue="Без заказа" style={{ width: 120 }}>
+          <Select defaultValue="Без заказа" style={{ width: 140 }}>
       <Option value="Без заказа">Без заказа</Option>
-      <Option value="Виктория">Виктория Микша</Option>
-      <Option value="Лада">Лада Литвин</Option>
-      <Option value="Илья">Илья Линник</Option>
+      <Option value="Виктория">Линник Илья</Option>
+      <Option value="Лада">Неверович Егор</Option>
+      <Option value="Илья">Курта Владислав</Option>
       <Option value="Женя">Арол Евгений</Option>
     </Select>
         );
