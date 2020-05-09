@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_ENDPOINT = 'http://localhost:3131';
+const API_ENDPOINT = 'https://cakesborisov.herokuapp.com';
 
 export const menuGetData = () => {
   return axios.get(`${API_ENDPOINT}/product`, {
